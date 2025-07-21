@@ -1,0 +1,155 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 24px;
+    line-height: 1.6;
+}
+
+/* Main heading */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 24px;
+    font-size: 2.5em;
+}
+
+/* Unit selection buttons */
+#customary, #metric {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#customary:hover, #metric:hover {
+    background-color: #0056b3;
+}
+
+#customary:disabled, #metric:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+/* Form styling */
+form {
+    max-width: 500px;
+    margin: 24px auto;
+    background-color: white;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Text inputs */
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#age {
+    width: 150px;
+}
+
+#weight, #height {
+    width: 200px;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+    margin-right: 8px;
+    margin-left: 0;
+}
+
+/* Bottom buttons container */
+.bottom-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+/* Action buttons */
+#calculate, #clear {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#clear {
+    background-color: #dc3545;
+}
+
+#calculate:hover {
+    background-color: #218838;
+}
+
+#clear:hover {
+    background-color: #c82333;
+}
+
+/* Center the unit buttons */
+.unit-buttons {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* Gender group styling */
+.gender-group {
+    margin-bottom: 24px;
+}
+
+.gender-group label[for="gender"] {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.gender-group input[type="radio"] {
+    margin-right: 8px;
+    margin-left: 0;
+}
+
+.gender-group label[for="male"], 
+.gender-group label[for="female"] {
+    display: inline;
+    margin-right: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
