@@ -55,7 +55,7 @@ For users 20 and under, the calculator:
 ## 📥 Installation
 
 ```bash
-git clone https://github.com/yourusername/bmi-calculator.git
+git clone https://github.com/azerjlhj/bmi-calculator.git
 cd bmi-calculator
 open index.html
 ```
