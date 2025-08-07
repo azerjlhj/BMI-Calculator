@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function calculateBmi(pounds, inches) {
   return ((pounds * 703) / (inches * inches)).toFixed(1);
@@ -9,28 +9,24 @@ function App() {
   const [height, setHeight] = useState(69);
   const [bmi, setBmi] = useState(calculateBmi(weight, height));
 
-  function incrementWeight() {
-    setWeight(weight + 1);
+  useEffect(() => {
     setBmi(calculateBmi(weight, height));
-    console.log(bmi);
+  }, [weight, height]);
+
+  function incrementWeight() {
+    setWeight((prev) => prev + 1);
   }
 
   function decrementWeight() {
-    setWeight(weight - 1);
-    setBmi(calculateBmi(weight, height));
-    console.log(bmi);
+    setWeight((prev) => prev - 1);
   }
 
   function incrementHeight() {
-    setHeight(height + 1);
-    setBmi(calculateBmi(weight, height));
-    console.log(bmi);
+    setHeight((prev) => prev + 1);
   }
 
   function decrementHeight() {
-    setHeight(height - 1);
-    setBmi(calculateBmi(weight, height));
-    console.log(bmi);
+    setHeight((prev) => prev - 1);
   }
 
   return (
